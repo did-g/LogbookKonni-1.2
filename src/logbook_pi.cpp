@@ -1454,7 +1454,7 @@ ArrayOfGridColWidth logbookkonni_pi::readColsOld( wxFileConfig *pConf, ArrayOfGr
 void logbookkonni_pi::loadLayouts( wxWindow *parent )
 {
     wxString FILE = _T( "LogbookKonni*.zip" );
-    std::auto_ptr<wxZipEntry> entry;
+    std::unique_ptr<wxZipEntry> entry;
     wxString path, sep;
     sep = wxFileName::GetPathSeparator();
 
