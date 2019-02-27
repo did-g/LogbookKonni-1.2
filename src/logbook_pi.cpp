@@ -1293,8 +1293,8 @@ void logbookkonni_pi::LoadConfig()
             
             for ( int i = 0; i < opt->numberSails; i++ )
             {
-                opt->abrSails.Item( i ) = tkz.GetNextToken();
-                opt->sailsName.Item( i ) = tkz.GetNextToken();
+                opt->abrSails.Add(tkz.GetNextToken());
+                opt->sailsName.Add(tkz.GetNextToken());
                 opt->bSailIsChecked[i] = ( wxAtoi( tkz.GetNextToken() )?true:false );
             }
         }
