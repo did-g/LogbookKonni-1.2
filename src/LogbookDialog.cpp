@@ -337,7 +337,7 @@ LogbookDialog::LogbookDialog( logbookkonni_pi * d, wxTimer* t, LogbookTimer* lt,
 #endif
     m_staticTextStatusText->Wrap( -1 );
     fgSizer53->Add( m_staticTextStatusText, 0, wxRIGHT|wxLEFT, 5 );
-    m_staticTextStatusText->SetFont( wxFont( 7, 74, 90, 90, false, wxT( "Tahoma" ) ) );
+    m_staticTextStatusText->SetFont( wxFont( 7, wxFONTFAMILY_SWISS, wxFONTSTYLE_NORMAL, wxFONTWEIGHT_NORMAL, false, wxT( "Tahoma" ) ) );
 
     bSizer39->Add( fgSizer53, 1, wxALIGN_RIGHT|wxALIGN_CENTER_VERTICAL, 0 );
 
@@ -4417,7 +4417,7 @@ void LogbookDialog::writeToRouteDlg( wxJSONValue data )
         if ( data[n][_T( "active" )].AsBool() )
         {
             wxFont font = dlg->m_listCtrlRoute->GetItemFont( ind );
-            font.SetWeight( wxBOLD );
+            font.SetWeight( wxFONTWEIGHT_BOLD );
             dlg->m_listCtrlRoute->SetItemFont( ind, font );
         }
         n++;
@@ -8134,7 +8134,7 @@ ColdFinger::ColdFinger( LogbookDialog* parent, wxWindowID id, const wxString& ti
 
     m_staticText97 = new wxStaticText( m_panel19, wxID_ANY, _( "Text" ), wxDefaultPosition, wxDefaultSize, wxALIGN_CENTRE );
     m_staticText97->Wrap( -1 );
-    m_staticText97->SetFont( wxFont( wxNORMAL_FONT->GetPointSize(), 70, 90, 92, false, wxEmptyString ) );
+    m_staticText97->SetFont( wxFont( wxNORMAL_FONT->GetPointSize(), wxFONTFAMILY_DEFAULT, wxFONTSTYLE_NORMAL, wxFONTWEIGHT_BOLD, false, wxEmptyString ) );
 
     bSizer31->Add( m_staticText97, 0, wxALL|wxEXPAND, 5 );
 
